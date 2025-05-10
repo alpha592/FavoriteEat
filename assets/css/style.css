@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: 'MeinPolicebold';
+    src: url('../font/LeagueSpartan-Bold.otf') format('opentype');
+  }
+
 :root{
     --white-primary : rgba(255 255 255 /0.9);
     --blackheader : rgba(0 0 0 0.2);
@@ -10,11 +15,16 @@
     --gray-primary : rgba(153, 153, 153, 1);
     --green-primary : rgba(39, 174, 96, 1);
     --gray-second : rgba(0,0,0,0.1);
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
 }
 
 html{
     scroll-behavior: smooth;
     /* font-size: 62.5%; */
+}
+
+::-webkit-scrollbar{
+    width: 0px;
 }
 
 body{
@@ -32,7 +42,6 @@ header{
     align-items: center;
     justify-content: space-between;
     background-color: var(--white-primary);
-    /* box-shadow: 0 0 10px var(--blackheader); */
     box-shadow: 0 0 10px var(--violetta);
 }
 
@@ -80,12 +89,11 @@ header{
 }
 
 #Acceuil{
-    height:fit-content;
+    height: 605px;;
     align-items: center;
     display: flex;
     justify-content: space-between;
     color: var(--gray-primary);
- 
 }
 
 #Acceuil h3{
@@ -152,17 +160,20 @@ header{
 
 .menu-title{
     /* margin-top: 150px; */
+    /* font-size: 20px; */
     justify-items: center;
 }
 
+.menu-title h2{
+    font-size: 35px;
+}
 .menu-title h4{
-    font-size: 16px;
+    font-size: 21px;
     color: var(--green-primary);
 }
 
 .dishes{
-    /* width: 60%; */
-    margin: 60px 200px;
+    margin: 40px 200px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -176,7 +187,7 @@ header{
     margin: 0px 0px 50px 50px;
     background-color: var(--white-primary) ;
     border-radius: 10px;
-    box-shadow: 0px 2px 5px 5px var(--violetta);
+    box-shadow: 5px 1px 10px 0px rgb(83, 82, 82);
 }
 
 .dishes .dish img{
@@ -198,10 +209,110 @@ header{
     margin-top: 20px;
     width: fit-content;
     padding: 4px 40px ;
-    /* margin-bottom: 20px; */
     text-decoration: none;
     color: var(--white-primary);
     font-weight: bolder;
     background-color: var(--green-primary);
     border-radius: 5px;
+}
+
+.Apropos{
+    
+}
+
+.card-top{
+    z-index: -1;
+}
+
+.card-buttom{
+    margin: -300px  560px;
+    z-index: -1;
+}
+
+.card-buttom img{
+    width: 800px;
+}
+
+.Apropos-container {
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin-top: -600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Apropos-container .text-container h2{
+    font-family: 'MeinPolicebold', sans-serif;
+    font-size: 35px;
+    color: var(--Very-Dark-Magenta);
+}
+
+.Apropos-container .text-container{
+    width: 600px;
+    height: 400px;
+}
+
+.Apropos-container .text-container p{
+    color: var(--gray-primary);
+    font-size: 20px; 
+}
+
+.sondage-container {
+   margin-top: -100px;
+}
+
+.sondage-container .stars{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    background-color: var(--gray-second);
+    border-radius: 5px;
+}
+
+.stars p{
+    margin-left: 20px;
+}
+
+/* temoingage */
+.temoingnage{
+    width: 80%;
+    margin:-100px 120px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box-one{
+    width: 300px ;
+    height: 150px ;
+    background-color:var(--white-primary);
+    box-shadow: 2px 1px 4px 5px  var(--Very-Dark-Magenta);
+    border-radius: 5px;
+}
+
+.box-one .title{
+    padding-top: 20px;
+    display: flex;
+    margin-left: 20px;
+}
+
+.title h4{
+    margin: 10px 0px 0px 2px;
+    font-family: 'MeinPolicebold', sans-serif;
+    color: var(--green-primary);
+}
+
+.title .little-title{
+    margin-left: 30px;
+}
+
+.box-one img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.box-one p{
+    margin: 6px 30px;
+    font-size: 15px;
 }
